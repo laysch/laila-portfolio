@@ -1,0 +1,596 @@
+<!DOCTYPE HTML>
+<head>
+
+    <!-- img -->
+    <meta name="image:favicon" content="">
+    <meta name="image:cursor" content="">
+
+    <meta name="image:background" content="">    
+
+    <meta name="image:pop up icon" content="">
+
+    <meta name="image:link 1" content="">
+    <meta name="image:link 2" content="">
+    <meta name="image:link 3" content="">
+    <meta name="image:link 4" content="">
+    <meta name="image:link 5" content="">
+
+
+    <!-- color -->
+    <meta name="color:background" content="">
+    <meta name="color:text" content="">
+    <meta name="color:link" content="">
+    <meta name="color:link hover" content="">
+
+    <meta name="color:link glow" content="">
+    <meta name="color:link glow hover" content="">
+
+    <meta name="color:text selection" content="">
+    <meta name="color:text selection background" content="">
+
+    <meta name="color:links" content="">
+    <meta name="color:links background" content="">
+
+    <meta name="color:footer border" content="">
+
+    <!-- txt -->
+    <meta name="text:scrolling website title" content="Welcome to my blog">
+    <meta name="text:name" content="">
+    <meta name="text:popup" content="">
+
+    <meta name="text:text size" content="17">
+
+    <meta name="text:song url" content="https://files.catbox.moe/w57jfk.mp3">
+    <meta name="text:song title" content="Wherever You Are (Nightcore)">
+    <meta name="text:song artist" content="DJ Laava">
+
+    <meta name="text:floatie glow" content="255, 255, 255">
+    <meta name="text:floatie size" content="150">
+    <meta name="text:floatie right" content="5">
+    <meta name="text:floatie bottom" content="0">
+
+    <meta name="text:floatie 2 glow" content="255, 255, 255">
+    <meta name="text:floatie 2 size" content="150">
+    <meta name="text:floatie 2 right" content="5">
+    <meta name="text:floatie 2 bottom" content="0">
+
+    <meta name="text:link 1 url" content="/">
+    <meta name="text:link 2 url" content="/ask">
+    <meta name="text:link 3 url" content="/archive">
+
+    <meta name="text:link 1" content="Refresh">
+    <meta name="text:link 2" content="Mailbox">
+    <meta name="text:link 3" content="Archive">
+    <meta name="text:link 5" content="Info.exe">
+
+    <meta name="text:permalink symbol" content="♡">
+    <meta name="text:tag symbol" content="♡">
+
+    <meta name="text:footer border size" content="1">
+
+
+
+    <!-- opt -->
+    <meta name="if:full background" content="">
+    <meta name="if:hover tags" content="">
+    <meta name="if:scrolling website title" content="">
+    <meta name="if:custom cursor" content="">
+    <meta name="if:link glow" content="">
+    <meta name="if:bold links" content="">
+    <meta name="if:link underline" content="">
+    <meta name="if:rainbow links" content="">
+    <meta name="if:all caps links" content="">
+    <meta name="if:image hue shift on hover" content="">
+
+
+    <!-- other -->
+    <link rel="shortcut icon" href="{image:favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"> 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><link href="//glen-npf-2020.glitch.me/npf-override.css" rel="stylesheet"><script src="//glen-npf-2020.glitch.me/npf-evenize.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script><link rel="stylesheet" href="https://unpkg.com/xp.css">
+
+<style type="text/css"> 
+
+    /* document body */
+    body{
+    background-image:url('{image:background}');
+    background-color:{color:background};
+    background-attachment:fixed;
+    color:{color:text};
+    {block:iffullbackground} 
+    background-size: cover;
+    {/block:iffullbackground};
+    font-size:{text:text size};
+    {block:ifcustomcursor}
+    cursor:url("{image:cursor}"), default;
+    {/block:ifcustomcursor}
+    overflow-x:hidden;}
+
+    a{
+    text-decoration:none;}
+
+    ::selection{ 
+    color:{color:text selection}; 
+    background-color:{color:text selection background};}
+
+    .npf_row {
+    margin: 0 !important;}
+
+    blockquote{
+    border-left:2px dashed {color:text};
+    padding-left:10px;
+    margin: 15px;}
+
+    p{
+    margin:0 0 5px 0;
+    padding:0;}
+
+    :root {
+    --NPF-Image-Spacing:4px;
+    --NPF-Bottom-Gap-From-Captions:1em;}
+
+
+    /* post & content */
+    #p{
+    width:600px;
+    top:100px;
+    z-index:9;
+    left:480px;}
+
+    #container{
+    height:430px;
+    overflow-y:auto;
+    overflow-x:hidden;}
+
+    .window-body{
+    font-size:16px;}
+
+    #content{
+    margin-left:70px;
+    width:450px;}
+
+    #content a{
+    color:{color:link};
+    {block:ifrainbowlinks}
+    font-weight:bold;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-size: 120% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: all 0.15s cubic-bezier(0.68, -0.25, 0.265, 1.25);
+    background-image: linear-gradient(45deg, #ff0900, #ff7f00, #ffef00, #00f11d, #0079ff, #a800ff, #ff0061, #ff0061);
+    {/block:ifrainbowlinks};
+    {block:ifallcapslinks}
+    text-transform: uppercase;
+    {/block:ifallcapslinks}
+    {block:iflinkglow}
+    text-shadow: 0 0 10px {color:link glow}; 0 0 10px;
+    {/block:iflinkglow};
+    {block:ifboldlinks}
+    font-weight:bold;
+    {/block:ifboldlinks}
+    {block:iflinkunderline}
+    text-decoration:underline;
+    {/block:iflinkunderline}
+    text-decoration:none;}
+
+    #content a:hover{
+    color:{color:link hover};
+    {block:iflinkglow}
+    text-shadow: 0 0 10px {color:link glow hover}; 0 0 10px;
+    {/block:iflinkglow};
+    font-style:italic;
+    {block:ifcustomcursor}
+    cursor:url("{image:cursor}"), default;
+    {/block:ifcustomcursor};}
+
+    .post, .nav{
+    padding:5px;
+    margin:0 0 15px 0;}
+
+
+    /* lanks */
+    #linky{
+    text-align:center;
+    width:60px;
+    position:fixed;
+    font-size:16px;
+    top:5px;
+    padding:5px;}
+
+    #folderx{
+    width:300px;
+    text-align:center;
+    padding:5px;
+    max-height:200px;
+    overflow-x:hidden;
+    overflow-y:auto;}
+
+    #pop{
+    margin-top:-450px;
+    margin-left:100px;}
+
+    #popup-desc{
+    padding:5px;
+    max-width:110px;
+    max-height:100px;
+    overflow-y:auto;
+    overflow-x:hidden;}
+
+    .link5{
+    margin:10px 0 5px 0;}
+
+    /* other stylization */
+    ol.notes{
+    list-style-type:none;
+    padding:3px;
+    overflow:auto;}
+
+    .post img{
+    max-width:500px;
+    max-width:100%;
+    height:auto;}
+
+    .photoset{
+    max-width:400px;}
+
+
+    /* footer */
+    .footer:hover .tags{
+    opacity:1;
+    transition:0.4s ease;
+    max-height:1000px;
+    margin-bottom:5px;
+    padding-bottom:5px;
+    margin-top:5px;}  
+
+    .tags{
+    opacity:0;
+    transition:0.4s ease;
+    margin-top:5px;
+    max-height:0px;} 
+
+    .footer{
+    background:transparent;
+    border:{text:footer border size}px {select:footer border style} {color:footer border};
+    padding:10px;}
+
+    /* other */ 
+    #c{
+    font-size:25px;
+    position:fixed; 
+    right:0px;
+    bottom:0px;}
+
+    #floatie{
+    position:fixed;
+    right:{text:floatie right}px;
+    bottom:{text:floatie bottom}px;
+    filter: drop-shadow(0 0 0.75rem rgb({text:floatie glow}));}
+
+    #floatie2{
+    position:fixed;
+    right:{text:floatie 2 right}px;
+    bottom:{text:floatie 2 bottom}px;
+    filter: drop-shadow(0 0 0.75rem rgb({text:floatie 2 glow}));}
+
+    .button{
+    background:transparent;
+    border-radius:5px;
+    padding:5px;}
+
+    .question{
+    padding:10px;
+    border:2px {select:footer border style} {color:footer border};
+    margin:0 0 15px 0;}
+
+    .button:hover{
+    cursor:help;}
+
+    {block:ifimagehueshiftonhover}
+    img{
+    -webkit-filter: hue-rotate(0deg);
+    -webkit-transition: 5s ease-in-out;
+    -moz-filter: grayscale(0%);
+    -moz-transition: 5s ease-in-out;
+    -o-filter: grayscale(0%);
+    -o-transition: 5s ease-in-out;} 
+
+    img:hover{
+    animation-iteration-count:infinite;
+    -webkit-filter: hue-rotate(360deg);
+    -webkit-transition: 5s ease-in-out;
+    -moz-filter: hue-rotate(360deg); 
+    -moz-transition: 5s ease-in-out;
+    -o-filter: hue-rotate(360deg); 
+    -o-transition: 5s ease-in-out;} 
+    {block:ifimagehueshiftonhover}
+
+{CustomCss}
+</style>
+</head>
+<body>
+
+
+<div id="p">
+<div class="window" style="width: 600px">
+<div class="title-bar">
+<div class="title-bar-text">my experience</div>
+<div class="title-bar-controls">
+<button aria-label="Minimize"></button>
+<button aria-label="Maximize"></button>
+<button aria-label="Close"></button>
+</div>
+</div>
+<div class="window-body">
+<div id="container">
+    <div id="content">
+        <!-- Verizon Section -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <img src="verizon.webp" alt="Verizon Logo" style="width: 50px; margin-right: 10px;">
+            <div>
+                <span>AI & Development Intern</span><br>
+                <b>Verizon</b><br>
+                June 2024-Present
+            </div>
+        </div>
+        <p>
+            ‣  Utilizing the Enterprise Data Lake (EDL) on JARVIS program, and Apache Kafka to develop and deploy scalable data pipelines, enabling efficient data integration and analysis to support AI-driven initiatives. <br>
+            ‣  Applying Agile methodologies, including Scrum, to coordinate and collaborate with cross-functional teams in developing machine learning models and data engineering solutions.
+
+        </p>
+        <br>
+        <!-- FDA Section -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <img src="fda.png" alt="FDA Logo" style="width: 50px; margin-right: 10px;">
+            <div>
+                <span>Software Development Intern</span><br>
+                <b>U.S Food and Drug Administration</b><br>
+                January 2024-Present
+            </div>
+        </div>
+        <p>
+            ‣ Optimizing workflow processes and conducting in-depth economic analyses of FDA policies. This role spans various regulatory domains, including food, human drugs, and medical devices.<br>
+            ‣  Integrating cutting-edge technology, employing machine learning models to extract valuable insights from complex datasets, enhancing the precision of regulatory assessments.
+        </p>
+        <br>
+        <!-- Columbia Mentor Section -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <img src="columbia.jpg" alt="Columbia Logo" style="width: 50px; margin-right: 10px;">
+            <div>
+                <span>Machine Learning Mentor</span><br>
+                <b>Columbia University</b><br>
+               June 2024
+            </div>
+        </div>
+        <p>
+            ‣ Designed an interactive workshop on machine learning at Columbia University’s STEM and Healthcare Career Exploration Event for pre-college students, focusing on the foundations of machine learning, image classification methodologies and responsible AI. <br>
+            ‣ Facilitated hands-on exercises where participants develop and train machine learning models, enabling real-time recognition of gestures and objects.
+        </p>
+        <br>
+        
+        <!-- Verizon Section -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <img src="verizon.webp" alt="Verizon Logo" style="width: 50px; margin-right: 10px;">
+            <div>
+                <span>Machine Learning Fellow</span><br>
+                <b>Verizon</b><br>
+                August 2023-December 2023
+            </div>
+        </div>
+        <p>
+            ‣  Developed a ML model, through Break Through Tech AI Studio, utilizing ARIMA modeling to forecast multi-regional population trends across the US, analyzing historical demographic data and time series patterns. <br>
+            ‣  Investigated the application of unsupervised clustering algorithms like fuzzy KMeans and Gaussian Mixture Models to segment population dynamics, allowing for a deeper understanding of regional variations and trends, enhancing predictive insights.
+
+        </p>
+        <br>
+        <!-- Cornell Tech Section -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <img src="cornell.jpg" alt="Cornell Tech Logo" style="width: 50px; margin-right: 10px;">
+            <div>
+                <span>Machine Learning/AI Fellow</span><br>
+                <b>Cornell Tech</b><br>
+                June 2023-April 2024
+            </div>
+        </div>
+        <p>
+            ‣ Working with large-scale datasets, conducting training, testing and evaluation of machine learning models under Break Through Tech AI & Cornell University.<br>
+            ‣ Applying data analysis and visualization techniques to reveal latent patterns within diverse models — Logistic Regression, Neural Networks, Decision Trees, K-Nearest Neighbors, K-Means, and Ensemble Methods with structured & unstructured data. <br>
+            ‣ Proficient in strategic feature engineering, hyperparameter tuning, and predictive model refinement. <br>
+            ‣ Adept at navigating ethical considerations in AI, including bias mitigation and transparency integration. <br>
+            ‣ Machine learning model development for plant specimen image classification tasks with The New York Botanical Garden to address biodiversity crisis.
+        </p>
+        <br>
+        
+        <!-- BTT Section -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <img src="btt.jpeg" alt="BTT Logo" style="width: 50px; margin-right: 10px;">
+            <div>
+                <span>Software Engineer Intern</span><br>
+                <b>Break Through Tech powered by Upperline Code</b><br>
+                April 2022
+            </div>
+        </div>
+        <p>
+            ‣  Mastered key principles of user-centered design, including effective user interview strategies and techniques for ensuring a high-quality user experience. <br>
+            ‣ Designed and implemented multiple interactive elements within self-made websites, leveraging HTML/CSS and JavaScript to deliver a seamless and engaging user experience.
+        </p>
+        <br>
+        <!-- Girls Who Code Hackathon Section -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <img src="gwc.png" alt="Girls Who Code" style="width: 50px; margin-right: 10px;">
+            <div>
+                <span>Hackathon 1st Place Winner - Design Category</span><br>
+                <b>Girls Who Code</b><br>
+                March 2022
+            </div>
+        </div>
+        <p>
+            ‣ Led a team of three in crafting an impactful pamphlet using Figma, focusing on UX/UI design principles.<br>
+            ‣ Integrated engaging visuals, vibrant colors, and concise messaging to promote STEM opportunities for underrepresented communities. <br>
+            ‣ Presented a cohesive design strategy that highlighted graphical elements and typography, ensuring both readability and visual appeal during the final pitch. <br>
+
+        </p>
+    
+</div>
+</div>
+
+
+
+<table>
+<tbody>
+<tr>
+<td style="width:50px">
+
+    <a href="{PreviousPage}"><button>&#10094;</button></a> 
+
+    </td>
+    <td style="width:500px; text-align:center;">
+
+
+    </td>
+    <td style="width:50px">
+
+    <a href="{NextPage}"><button>&#10095;</button></a>
+
+    </td>
+    </tr>
+    </tbody>
+    </table>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="linky">
+    <div class="welcome">
+        <a href="index.html">
+            <img style="margin: 0 0 3px 0; width: 50px;" src="icon-1.png"> <!-- Adjust width as needed -->
+            <br>
+            <text style="background-color: {color:links background}; color: {color:links}; font-family: {select:font};">welcome</text>
+        </a>
+    </div>
+
+     <br>
+    <br>
+
+    <div class="my experience">
+        <a href="{text:link 2 url}">
+            <img style="margin: 0 0 3px 0; width: 50px;" src="icon-22.png"> <!-- Adjust width as needed -->
+            <br>
+            <text style="background-color: {color:links background}; color: {color:links}; font-family: {select:font};">my experience</text>
+        </a>
+    </div>
+
+    <br>
+     <br>
+
+
+    <div class="project's i've worked on">
+        <a href="projects.html">
+            <img style="margin: 0 0 3px 0; width: 50px;" src="icon-3.png"> <!-- Adjust width as needed -->
+            <br>
+            <text style="background-color: {color:links background}; color: {color:links}; font-family: {select:font};">projects i've worked on</text>
+        </a>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="reach out to me">
+        <a href="{text:link 4 url}">
+            <img style="margin: 0 0 3px 0; width: 50px;" src="icon-4.png"> <!-- Adjust width as needed -->
+            <br>
+            <text style="background-color: {color:links background}; color: {color:links}; font-family: {select:font};">reach out to me</text>
+        </a>
+    </div>
+
+</div> 
+
+<div id="pop">
+<div style="padding:5px; display:none;" id="cont">
+<div class="window" style="width: 325px">
+<div class="title-bar">
+<div class="title-bar-text">{text:name}'s Links</div>
+<div class="title-bar-controls">
+<button aria-label="Minimize"></button>
+<button aria-label="Maximize"></button>
+<button aria-label="Close"></button>
+</div>
+</div>
+<div class="window-body">
+<div id="folderx">
+<table style="width:325px">
+<tbody>
+<tr>
+<td style="width:150px">
+<img style="width:150px; display:block; height:150px;" src="{image:pop up icon}">
+</td>
+<td style="width:150px">
+<div id="popup-desc">
+{text:popup}
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<script>
+    function toggle(ele) {
+        var cont = document.getElementById('cont');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+
+            document.getElementById(ele.id).value = 'GO!';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Bye';
+        }
+    }
+</script> 
+
+
+</div>
+</div>
+</div>
+
+
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+$( "#p" ).draggable();
+</script>
+<script>
+$( ".link1" ).draggable();
+</script>
+<script>
+$( ".link2" ).draggable();
+</script>
+<script>
+$( ".link3" ).draggable();
+</script>
+<script>
+$( ".link4" ).draggable();
+</script>
+<script>
+$( ".link5" ).draggable();
+</script>
+<script>
+$( "#pop" ).draggable();
+</script>
+
+</body>
+</html>
